@@ -1,0 +1,49 @@
+{
+  "name": "drupal-org-streamline",
+  "description": "Browser extension to streamline the appearance of Drupal.org.",
+  "version": "0.0.1",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/balintbrews/drupal-org-streamline.git"
+  },
+  "author": "Bálint Kléri (https://balintbrews.com)",
+  "bugs": "https://github.com/balintbrews/drupal-org-streamline/issues",
+  "homepage": "https://github.com/balintbrews/drupal-org-streamline#readme",
+  "type": "module",
+  "dependencies": {
+    "clsx": "^2.1.1",
+    "preact": "^10.25.3",
+    "tailwind-merge": "^3.0.1",
+    "tailwindcss": "^4.0.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.19.0",
+    "@ianvs/prettier-plugin-sort-imports": "^4.4.1",
+    "@preact/preset-vite": "^2.9.3",
+    "@tailwindcss/vite": "^4.0.1",
+    "eslint": "^9.19.0",
+    "eslint-plugin-react": "^7.37.4",
+    "eslint-plugin-react-hooks": "^5.1.0",
+    "globals": "^15.14.0",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^3.4.2",
+    "prettier-plugin-tailwindcss": "^0.6.11",
+    "typescript": "~5.6.2",
+    "typescript-eslint": "^8.22.0",
+    "vite": "^6.0.5"
+  },
+  "scripts": {
+    "dev": "tsc -b --watch & vite build --watch",
+    "build": "tsc -b && vite build",
+    "code:check": "run-s -c -n code:check:**",
+    "code:check:tsc": "tsc --noEmit",
+    "code:check:eslint": "npm run s:eslint",
+    "code:check:prettier": "npm run s:prettier -- --check",
+    "code:fix": "run-s -c -n code:fix:**",
+    "code:fix:eslint": "npm run s:eslint -- --fix",
+    "code:fix:prettier": "npm run s:prettier -- --write",
+    "s:eslint": "eslint \"**/*.{js,jsx,ts,tsx}\"",
+    "s:prettier": "prettier \"**/*.{js,jsx,ts,tsx,json,html,md,mdx,yml}\""
+  }
+}

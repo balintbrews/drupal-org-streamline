@@ -1,0 +1,12 @@
+@layer theme, utilities;
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/utilities.css" layer(utilities);
+
+.menu-nav,
+#navigation-inner .region-navigation,
+#header,
+#banner,
+.breadbox,
+#footer {
+  display: none;
+}

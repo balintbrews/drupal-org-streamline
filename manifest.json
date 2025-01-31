@@ -1,0 +1,14 @@
+{
+  "manifest_version": 2,
+  "name": "Drupal.org Streamline",
+  "version": "0.0.1",
+  "description": "Streamlines the appearance of Drupal.org.",
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.drupal.org/*"],
+      "css": ["dist/index.css"],
+      "js": ["dist/index.js"]
+    }
+  ]
+}
