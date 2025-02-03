@@ -1,6 +1,10 @@
 @layer theme, utilities;
-@import "tailwindcss/theme.css" layer(theme);
-@import "tailwindcss/utilities.css" layer(utilities);
+@import 'tailwindcss/theme.css' layer(theme);
+@import 'tailwindcss/utilities.css' layer(utilities);
+
+@theme {
+  --font-mono: Monaco, Consolas, 'Anal Mono', 'Ubuntu Mono', monospace;
+}
 
 .menu-nav,
 #navigation-inner .region-navigation,
@@ -9,4 +13,16 @@
 .breadbox,
 #footer {
   display: none;
+}
+
+#nav-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+
+#page {
+  margin-top: 2.5em;
 }
