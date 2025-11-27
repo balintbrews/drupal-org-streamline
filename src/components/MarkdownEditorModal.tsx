@@ -16,7 +16,6 @@ const theme = EditorView.theme({
   },
   '.cm-content': {
     maxWidth: '100ch',
-    padding: '0.5rem 1rem',
     fontFamily: '"JetBrains Mono", monospace',
     lineHeight: '1.8',
   },
