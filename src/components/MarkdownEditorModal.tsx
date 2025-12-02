@@ -16,6 +16,8 @@ const theme = EditorView.theme({
   },
   '.cm-content': {
     maxWidth: '100ch',
+    paddingTop: '2.5rem',
+    paddingBottom: '2.5rem',
     fontFamily: '"JetBrains Mono", monospace',
     lineHeight: '1.8',
   },
@@ -189,7 +191,7 @@ export function MarkdownEditorModal({
         type="button"
         onClick={onClose}
         className={cn(
-          'absolute top-2 right-6 z-10',
+          'absolute top-10 right-10 z-10 !m-0 !-mt-2',
           'flex h-10 w-10 items-center justify-center',
           'rounded-full !border-none !bg-[##4e4e4e] !text-white shadow-lg',
           'transition-all hover:!bg-[#367d02]',
@@ -214,10 +216,7 @@ export function MarkdownEditorModal({
       </button>
 
       {/* Editor */}
-      <div
-        className="flex flex-1 flex-col justify-center overflow-auto p-6"
-        ref={editorRef}
-      >
+      <div className="flex-1 overflow-auto px-6" ref={editorRef}>
         <div className="w-full">
           <CodeMirror
             key={editorKey.current}
